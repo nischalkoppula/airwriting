@@ -1,0 +1,54 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Live Streaming Demonstration</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8  offset-lg-2">
+            <h3 class="mt-5">Live Air Writing Demonstration</h3>
+            <img src="{{ url_for('viewcamera') }}" width="100%">
+        </div>
+    </div>
+<form action="/" method="POST">
+    <br>
+    <label for="thickness">Thickness:</label>
+    <input type="text" name="thick" id= "thickness" style="margin-right: 30px">
+    <label for="col">Pen Color:</label>
+    <select name="colors" id="col" style="margin-right: 30px">
+        <option value="yellow" selected>yellow</option>
+        <option value="blue">blue</option>
+        <option value="red">red</option>
+        <option value="green">green</option>
+    </select>
+    <lable for="p_c">Pointer Color:</lable>
+   <select name="pointer_color" id="p_c" style="margin-right: 30px">
+        <option value="black" selected>black</option>
+        <option value="green">green</option>
+        <option value="yellow">yellow</option>
+        <option value="orange">orange</option>
+    </select>
+    <input type="submit">
+</form>
+
+<form action="/close" method="POST">
+    <br>
+    <input type="submit" value="Close Camera">
+</form>
+
+
+
+
+</div>
+</body>
+</html>
